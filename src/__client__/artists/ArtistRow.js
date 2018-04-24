@@ -19,9 +19,15 @@ ArtistRow.propTypes = {
 export default ArtistRow;
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', alignItems: 'center', padding: 12 },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 12,
+    justifyContent: 'center'
+  },
   picture: { width: 50, height: 50, borderRadius: 25, marginRight: 18 },
   primaryText: {
+    flex: 1,
     fontWeight: 'bold',
     fontSize: 14,
     color: 'black',

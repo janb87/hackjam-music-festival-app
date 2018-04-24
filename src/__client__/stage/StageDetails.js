@@ -60,10 +60,16 @@ class StageDetails extends Component {
   renderItem = ({ item: { artist, start, end } }) => {
     return (
       <ArtistRow artist={artist} key={artist.id}>
-        {this.renderSeparator()}
-        <Text style={{ color: 'grey' }}>{`${moment(start).format(
-          'HH:mm'
-        )} - ${moment(end).format('HH:mm')}`}</Text>
+        <Text
+          style={{
+            color: 'grey',
+            marginBottom: 4
+          }}
+        >
+          &nbsp;{`${moment(start).format('HH:mm')} - ${moment(end).format(
+            'HH:mm'
+          )}`}
+        </Text>
       </ArtistRow>
     );
   };
