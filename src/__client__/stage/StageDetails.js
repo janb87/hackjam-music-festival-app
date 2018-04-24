@@ -40,7 +40,8 @@ class StageDetails extends Component {
       );
 
       const details = scheduleRequest.data.program.map(
-        ({ start, end, artistId }) => ({
+        ({ id, start, end, artistId }) => ({
+          id,
           artist: artistsRequest.data.find(artist => artist.id === artistId),
           start: new Date(start),
           end: new Date(end)
@@ -93,6 +94,7 @@ class StageDetails extends Component {
       <View>
         <FlatList
           data={stageDetails}
+          keyExtractor={item => item.id}
           renderItem={this.renderItem}
           ItemSeparatorComponent={this.renderSeparator}
           ListHeaderComponent={() =>
