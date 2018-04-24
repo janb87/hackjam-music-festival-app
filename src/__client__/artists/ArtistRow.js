@@ -1,19 +1,16 @@
 import React from 'react';
-import {Image, Text, View, StyleSheet} from 'react-native';
+import { Image, Text, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-const ArtistRow = ({
-  artist: {artistImageUrl, name}
-}) => {
+const ArtistRow = ({ artist: { artistImageUrl, name }, children }) => {
   return (
     <View style={styles.row}>
-      <Image style={styles.picture} source={{uri: artistImageUrl}} />
-      <Text style={styles.primaryText}>
-        {name}
-      </Text>
+      <Image style={styles.picture} source={{ uri: artistImageUrl }} />
+      <Text style={styles.primaryText}>{name}</Text>
+      {children}
     </View>
-  )
-}
+  );
+};
 
 ArtistRow.propTypes = {
   artist: PropTypes.object.isRequired
@@ -22,13 +19,12 @@ ArtistRow.propTypes = {
 export default ArtistRow;
 
 const styles = StyleSheet.create({
-  row: { flexDirection: "row", alignItems: "center", padding: 12 },
+  row: { flexDirection: 'row', alignItems: 'center', padding: 12 },
   picture: { width: 50, height: 50, borderRadius: 25, marginRight: 18 },
   primaryText: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 14,
-    color: "black",
+    color: 'black',
     marginBottom: 4
-  },
-  secondaryText: { color: "grey" }
+  }
 });
