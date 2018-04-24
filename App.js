@@ -13,6 +13,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" backgroundColor="#000088"/>
+        <Header />
         <NativeRouter>
           <View style={{flex: 1}}>
             <View style={styles.viewContainer}>

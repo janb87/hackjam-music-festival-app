@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text, StyleSheet } from 'react-native';
 
-// TODO Display header 'Music Festival App'
 const Header = ({style}) => (
   <View style={[styles.container, style]}>
+    <Text style={[styles.title, style]}>Music Festival App</Text>
   </View>
 );
 
