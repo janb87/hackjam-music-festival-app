@@ -17,8 +17,7 @@ const NavigationButton = ({icon, to, currentPathname, label}) => {
 
     return currentPathname.includes(path)
   });
-  // TODO: Link component uses the `to` prop to know where it needs to go
-  return <Link to="/" style={styles.container} >
+  return <Link to={to} style={styles.container} >
     <View style={styles.container}>
       <Ionicons name={icon} size={25} color={activePath ? '#00ef00' : '#fff'} />
       <Text style={[styles.navigationText, { color: activePath ? '#00ef00' : '#fff'}]}>

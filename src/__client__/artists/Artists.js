@@ -11,7 +11,6 @@ class Artists extends Component {
 
   async componentDidMount(){
     const {data: artists} = await axios.get(`${serverUrl}/artists`);
-    console.log('artists', artists);
     this.setState({artists});
   }
 
